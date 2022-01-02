@@ -1,0 +1,1 @@
+enum EnumType { prod, dev }

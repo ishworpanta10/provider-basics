@@ -20,4 +20,5 @@ Future<void> setupLocators() async {
   locator.registerLazySingleton<NavigationService>(() => NavigationService());
 
   // * Other
+  locator.registerLazySingleton<BasicProvider>(() => BasicProvider());
 }

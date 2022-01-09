@@ -20,7 +20,10 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<ThemeProvider>.value(
-          value: ThemeProvider(),
+          value: locator<ThemeProvider>(),
+        ),
+        ChangeNotifierProvider<BasicProvider>.value(
+          value: locator<BasicProvider>(),
         ),
       ],
       child: const InitializeTheme(),
@@ -41,7 +44,7 @@ class _InitializeThemeState extends State<InitializeTheme> {
   @override
   void initState() {
     super.initState();
-    // locator<ThemeProvider>().init();
+    locator<ThemeProvider>().init();
   }
 
   @override
